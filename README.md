@@ -1,15 +1,28 @@
 # GCMJP Botas Táticas
 
-Sistema para levantamento de numeração de botas táticas da Guarda Civil Municipal de João Pessoa.
+Protótipo inicial de levantamento de numeração de botas táticas da Guarda Civil Municipal de João Pessoa.
 
-## Estado
+**Não utilizar em produção ou com dados reais.** Não há banco de dados, autenticação, persistência, protocolos reais ou retificação.
 
-Projeto em desenvolvimento. A primeira etapa será uma interface demonstrativa sem banco de dados e sem publicação.
+## Execução local
 
-## Referência
+Node.js 20.9+:
 
-Tabela de medidas de palmilha da bota tática Kallucci fornecida para o levantamento. A conversão deve usar apenas os pares exatos da tabela, sem interpolação automática.
+```bash
+npm install
+npm run dev
+```
 
-## Segurança
+Acesse http://localhost:3000.
 
-Não utilizar dados pessoais reais em testes ou exemplos. A identificação por nome e matrícula não comprova identidade.
+## Rotas
+
+- `/` — página inicial.
+- `/formulario` — simulação de identificação e numeração conforme a tabela Kallucci.
+- `/admin` — esqueleto demonstrativo do painel, sem dados reais.
+
+## Regras e pendências
+
+A tabela de palmilha está em `src/lib/medidas.ts`. Não se deve interpolar ou arredondar medidas não fornecidas. Antes de uso oficial, validar a tabela com o fornecedor, obter lista oficial de lotações, definir padrão de matrícula e implementar banco de dados, proteção contra duplicidade, autenticação administrativa, código seguro de retificação, auditoria, relatórios e revisão de privacidade/LGPD.
+
+Esta entrega não conecta Supabase e não publica na Vercel.

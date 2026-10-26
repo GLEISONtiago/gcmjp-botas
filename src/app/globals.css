@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+:root { color-scheme: light; }
+body { margin: 0; background: #f3f6fa; color: #15243a; font-family: Arial, Helvetica, sans-serif; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.container { max-width: 980px; margin: auto; padding: 24px 16px; }
+.card { background: white; border: 1px solid #dce3ed; border-radius: 16px; padding: 24px; box-shadow: 0 6px 24px #172b4d0a; }
+.field { display: grid; gap: 7px; margin: 14px 0; }
+.field input, .field select, .field textarea { width: 100%; border: 1px solid #aebed1; border-radius: 9px; padding: 11px; background: white; }
+.btn { display: inline-block; border: 0; border-radius: 10px; padding: 12px 18px; background: #123b65; color: white; text-decoration: none; font-weight: bold; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.muted { color: #52657c; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+header { background: #102d4b; color: white; }
+header a { color: white; }
+table { width: 100%; border-collapse: collapse; } td, th { border-bottom: 1px solid #e0e7ef; padding: 9px; text-align: left; }
